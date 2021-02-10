@@ -1,0 +1,23 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Blarg",
+  "short_name": "blarg",
+  "icons": [
+    {
+      "src": "/static/favicon/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/favicon/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1a1a1a",
+  "background_color": "#1a1a1a",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "natural"
+}

@@ -1,0 +1,47 @@
+body {
+  @apply font-inter text-gray-800 bg-gray-100 antialiased leading-7;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: theme('colors.gray.800');
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+main {
+  @apply flex-1;
+}
+
+footer {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    theme('colors.gray.500') 12px
+  );
+}
+
+
+
+@screen lg {
+  body {
+    display: grid;
+    grid-template:  "sidebar main"   1fr
+                    "xxx     footer" 72px /
+                    240px    1fr;
+  }
+
+  header {
+    display: block;
+  }
+
+  footer {
+    grid-column: 2 / -1;
+  }
+}

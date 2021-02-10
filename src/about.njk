@@ -1,0 +1,19 @@
+---
+title: About
+---
+{% from "macros.njk" import subsection %}
+{% extends 'page.njk' %}
+
+{% block body %}
+  <section>
+    <div class="max-w-4xl mx-auto p-8">
+      <h1 class="text-2xl mb-4">{{ title }}</h1>
+
+      ...
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="/static/about.js"></script>
+{% endblock %}

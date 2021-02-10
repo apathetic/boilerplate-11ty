@@ -1,0 +1,28 @@
+{% macro subsection(title, items, format) %}
+  <div class="block">
+    <h3 class="font-black">{{ title }}</h3>
+
+    {% if format == 'dl' %}
+      <dl>
+        {% for key, value in items %}
+          <dt class="float-left text-right pr-2 w-24">{{ key }}</dt>
+          <dd class="ml-24">{{ value }}</dd>
+        {% endfor %}
+      </dl>
+    {% else %}
+      {{ linkify(items) }}
+    {% endif  %}
+
+  </div>
+{% endmacro %}
+
+
+{% macro linkify(items) %}
+  <ul class="list-disc pl-6">
+    {% for key, value in items %}
+      <li>
+        <a href={{ value }} target="_blank" rel="noopener noreferrer">{{ key }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
